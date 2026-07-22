@@ -1,0 +1,6 @@
+{
+  "name": "Sorside",
+  "description": "A digital home for Sorside, where music meets the story behind it. A minimal, dark, cinematic space for an independent artist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

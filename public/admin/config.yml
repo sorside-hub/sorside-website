@@ -1,0 +1,171 @@
+backend:
+  name: github
+  repo: sorside-hub/sorside-web # Silakan ganti dengan username/repository GitHub Anda (contoh: taufik/sorside)
+  branch: main # Atau 'master'
+  base_url: https://sorside.pages.dev # Ganti dengan URL Cloudflare Pages Anda
+  auth_endpoint: /api/auth
+
+# Aktifkan pencatatan perubahan langsung & preview lokal
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site_config"
+    label: "⚙️ Konfigurasi Situs & Halaman"
+    files:
+      - file: "public/content/site_config.json"
+        label: "Pengaturan Website (Home, About, The Side, Contact, Music)"
+        name: "home_config"
+        fields:
+          - label: "📌 KUTIPAN & DESKRIPSI HOME"
+            name: "home_header"
+            widget: "heading"
+          - { label: "Kutipan Deskripsi Utama", name: "descriptionQuote", widget: "string" }
+          - { label: "Deskripsi Detail Utama", name: "descriptionDetail", widget: "text" }
+          - { label: "URL Gambar Poster", name: "posterImageUrl", widget: "image" }
+          - { label: "Label Poster", name: "posterLabel", widget: "string" }
+          - { label: "Kutipan Poster", name: "posterQuote", widget: "text" }
+          - { label: "ID Rilisan Musik Terbaru", name: "latestReleaseSongId", widget: "string" }
+          - { label: "Sumber Artikel From The Side", name: "fromTheSideSource", widget: "string" }
+          - { label: "Judul Kustom From The Side", name: "fromTheSideTitleCustom", widget: "string", required: false }
+          - { label: "Teks Kustom From The Side", name: "fromTheSideTextCustom", widget: "text", required: false }
+
+          - label: "📜 MANIFESTO"
+            name: "manifesto_header"
+            widget: "heading"
+          - { label: "Judul Manifesto", name: "manifestoTitle", widget: "string", required: false }
+          - { label: "Kutipan Manifesto", name: "manifestoQuote", widget: "string", required: false }
+          - { label: "Teks Utama Manifesto", name: "manifestoText", widget: "text", required: false }
+
+          - label: "📖 HALAMAN ABOUT"
+            name: "about_header"
+            widget: "heading"
+          - { label: "Judul Hero About", name: "aboutTitlePrefix", widget: "string", required: false }
+          - { label: "Sub-judul Hero About", name: "aboutHeroSubtitle", widget: "string", required: false }
+          - { label: "Deskripsi Hero About", name: "aboutHeroDescription", widget: "text", required: false }
+          - { label: "Judul Filosofi Karya", name: "aboutSection1Title", widget: "string", required: false }
+          - { label: "Paragraf 1 Filosofi Karya", name: "aboutSection1Text1", widget: "text", required: false }
+          - { label: "Paragraf 2 Filosofi Karya", name: "aboutSection1Text2", widget: "text", required: false }
+          - { label: "Judul Kenapa sorside", name: "aboutSection2Title", widget: "string", required: false }
+          - { label: "Teks 1 Kenapa sorside", name: "aboutSection2Text1", widget: "text", required: false }
+          - { label: "Kutipan Filosofi Nama", name: "aboutSection2Quote", widget: "text", required: false }
+          - { label: "Teks 2 Kenapa sorside", name: "aboutSection2Text2", widget: "text", required: false }
+          - { label: "Judul Visi Kami", name: "aboutSection3Title", widget: "string", required: false }
+          - { label: "Teks 1 Visi Kami", name: "aboutSection3Text1", widget: "text", required: false }
+          - { label: "Teks 2 Visi Kami", name: "aboutSection3Text2", widget: "text", required: false }
+          - { label: "Judul Karakter Suara", name: "aboutSection4Title", widget: "string", required: false }
+          - { label: "Teks Karakter Suara", name: "aboutSection4Text1", widget: "text", required: false }
+          - { label: "Poin 1 Karakter Suara", name: "aboutSection4Bullet1", widget: "string", required: false }
+          - { label: "Poin 2 Karakter Suara", name: "aboutSection4Bullet2", widget: "string", required: false }
+          - { label: "Poin 3 Karakter Suara", name: "aboutSection4Bullet3", widget: "string", required: false }
+          - { label: "Teks Penutup Karakter Suara", name: "aboutSection4Text2", widget: "text", required: false }
+          - { label: "Judul Di Balik sorside", name: "aboutSection5Title", widget: "string", required: false }
+          - { label: "Tagline Kreator", name: "aboutSection5Tagline", widget: "string", required: false }
+          - { label: "Paragraf 1 Di Balik sorside", name: "aboutSection5Text1", widget: "text", required: false }
+          - { label: "Paragraf 2 Di Balik sorside", name: "aboutSection5Text2", widget: "text", required: false }
+          - { label: "URL Foto Studio/Kreator", name: "aboutSection5CoverUrl", widget: "image", required: false }
+          - { label: "Kutipan Penutup About", name: "aboutManifestoQuote", widget: "text", required: false }
+
+          - label: "📓 HALAMAN THE SIDE (JURNAL)"
+            name: "theside_header"
+            widget: "heading"
+          - { label: "Judul Prefix The Side", name: "theSideTitlePrefix", widget: "string", required: false }
+          - { label: "Subtitle The Side", name: "theSideSubtitle", widget: "string", required: false }
+          - { label: "Deskripsi The Side", name: "theSideDescription", widget: "text", required: false }
+          - { label: "ID Artikel Unggulan", name: "theSideFeaturedId", widget: "string", required: false }
+
+          - label: "📬 HALAMAN KONTAK"
+            name: "contact_header"
+            widget: "heading"
+          - { label: "Subtitle Kontak", name: "contactSubtitle", widget: "string", required: false }
+          - { label: "Kutipan Kontak", name: "contactQuote", widget: "string", required: false }
+          - { label: "Deskripsi Kontak", name: "contactDescription", widget: "text", required: false }
+          - { label: "Email Kontak", name: "contactEmail", widget: "string", required: false }
+          - { label: "Link Instagram", name: "contactInstagram", widget: "string", required: false }
+          - { label: "Link TikTok", name: "contactTiktok", widget: "string", required: false }
+          - { label: "Link YouTube", name: "contactYoutube", widget: "string", required: false }
+          - { label: "Link Spotify", name: "contactSpotify", widget: "string", required: false }
+          - { label: "Link Apple Music", name: "contactAppleMusic", widget: "string", required: false }
+          - { label: "Nama Kolektif/Manajemen", name: "contactManagementName", widget: "string", required: false }
+          - { label: "Estimasi Waktu Respon", name: "contactManagementResponseTime", widget: "string", required: false }
+
+          - label: "🎵 HALAMAN MUSIK"
+            name: "music_header"
+            widget: "heading"
+          - { label: "Judul Prefix Musik", name: "musicTitlePrefix", widget: "string", required: false }
+          - { label: "Subtitle Musik", name: "musicSubtitle", widget: "string", required: false }
+          - { label: "ID Lagu Unggulan (Featured)", name: "featuredReleaseId", widget: "string", required: false }
+
+  - name: "journals"
+    label: "📝 Artikel & Jurnal (The Side)"
+    folder: "public/content/journals"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID Unik Artikel (Tanpa Spasi, contoh: kenapa-buat-musik)", name: "id", widget: "string" }
+      - { label: "Judul Artikel", name: "title", widget: "string" }
+      - { label: "Kategori (Code, contoh: STORY)", name: "category", widget: "string" }
+      - { label: "Label Kategori (Tampilan, contoh: Cerita)", name: "categoryLabel", widget: "string" }
+      - { label: "Tanggal Publikasi", name: "date", widget: "string" }
+      - { label: "Est. Waktu Baca (contoh: 5 min read)", name: "readTime", widget: "string" }
+      - { label: "URL Gambar Sampul / Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Ringkasan Singkat (Summary)", name: "summary", widget: "text" }
+      - { label: "Isi Konten Lengkap", name: "content", widget: "markdown" }
+      - { label: "ID Lagu Terinspirasi (Opsional)", name: "inspiredSongId", widget: "string", required: false }
+      - { label: "Judul Lagu Terinspirasi (Opsional)", name: "inspiredSongTitle", widget: "string", required: false }
+      - { label: "Tipe Inspirasi", name: "inspirationType", widget: "select", options: ["journal", "song"], default: "journal" }
+
+  - name: "songs"
+    label: "🎶 Diskografi & Musik"
+    folder: "public/content/songs"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID Unik Lagu (contoh: skenario-25)", name: "id", widget: "string" }
+      - { label: "Judul Lagu", name: "title", widget: "string" }
+      - { label: "Nama Artis", name: "artist", widget: "string", default: "sorside" }
+      - { label: "Tahun Rilis", name: "year", widget: "string" }
+      - { label: "Tipe Rilisan (Single / EP / Album)", name: "type", widget: "string" }
+      - { label: "Tag Genre / Mood", name: "tag", widget: "string" }
+      - { label: "URL Artwork / Cover", name: "cover", widget: "image" }
+      - { label: "Cerita di Balik Lagu", name: "story", widget: "text" }
+      - { label: "Lirik Lagu", name: "lyrics", widget: "markdown", required: false }
+      - { label: "Kredit Produksi", name: "credits", widget: "markdown", required: false }
+      - { label: "URL YouTube (Link Video / Audio YouTube)", name: "youtubeUrl", widget: "string", required: false }
+      - { label: "URL Spotify (Link Track / Album Spotify)", name: "spotifyUrl", widget: "string", required: false }
+
+  - name: "journey"
+    label: "🚀 Milestone Perjalanan (Journey)"
+    folder: "public/content/journey"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID Milestone (contoh: journey-1)", name: "id", widget: "string" }
+      - { label: "Tahun / Periode (contoh: 2025)", name: "year", widget: "string" }
+      - { label: "Judul Milestone", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Nomor Urutan", name: "order", widget: "number", value_type: "int" }
+      - { label: "Hanya di Laci Detail (Drawer Only)", name: "isDrawerOnly", widget: "boolean", default: false, required: false }
+      - { label: "Label Fase (Opsional)", name: "phaseLabel", widget: "string", required: false }
+
+  - name: "categories"
+    label: "🏷️ Kategori Jurnal"
+    files:
+      - file: "public/content/categories.json"
+        label: "Daftar Kategori Jurnal"
+        name: "categories_list"
+        fields:
+          - label: "Kategori"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Kode ID Kategori (contoh: STORY)", name: "id", widget: "string" }
+              - { label: "Label Tampilan (contoh: Cerita)", name: "label", widget: "string" }
