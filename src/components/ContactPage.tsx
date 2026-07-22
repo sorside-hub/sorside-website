@@ -137,12 +137,12 @@ export default function ContactPage({ theme, config, onSubmitMessage }: ContactP
                 <div>
                   <span className="text-[9px] font-mono uppercase text-stone-500 block">EMAIL UTAMA</span>
                   <a 
-                    href={`mailto:${config.contactEmail || "hello@sorside.com"}`} 
+                    href={`mailto:${config.contactEmail || "sorside.raw@gmail.com"}`} 
                     className={`text-sm font-semibold hover:text-sorside-red transition-colors ${
                       theme === "dark" ? "text-white" : "text-stone-900"
                     }`}
                   >
-                    {config.contactEmail || "hello@sorside.com"}
+                    {config.contactEmail || "sorside.raw@gmail.com"}
                   </a>
                 </div>
               </div>

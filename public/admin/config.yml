@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: sorside-hub/sorside-web # Silakan ganti dengan username/repository GitHub Anda (contoh: taufik/sorside)
+  repo: sorside-hub/sorside-website # Silakan ganti dengan username/repository GitHub Anda (contoh: taufik/sorside)
   branch: main # Atau 'master'
   base_url: https://sorside.pages.dev # Ganti dengan URL Cloudflare Pages Anda
   auth_endpoint: /api/auth

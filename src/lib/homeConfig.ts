@@ -136,7 +136,7 @@ export const DEFAULT_HOME_CONFIG: HomeConfig = {
   contactSubtitle: "SISI HUBUNGAN // CHANNELS",
   contactQuote: "Mari saling terhubung.",
   contactDescription: "Entah itu ajakan kolaborasi, obrolan santai, atau sekadar menyapa dan berbagi cerita. Setiap hubungan selalu dimulai dari satu sapaan tulus.",
-  contactEmail: "hello@sorside.com",
+  contactEmail: "sorside.raw@gmail.com",
   contactInstagram: "https://www.instagram.com/sor.side",
   contactTiktok: "https://www.tiktok.com/@sor.side",
   contactYoutube: "https://youtube.com/@sorside",
