@@ -16,7 +16,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({
   value,
   onChange,
   label = "Foto / Cover / Sampul",
-  theme = "dark",
+  theme = "light",
   presetOptions = [],
   aspectRatio = "square",
   placeholder = "Pilih file dari perangkat atau masukkan URL gambar...",

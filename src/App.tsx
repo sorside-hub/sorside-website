@@ -204,7 +204,7 @@ const hashToTab = (hash: string): "home" | "music" | "about" | "the side" | "con
 };
 
 export default function App() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
   const [activeTab, setActiveTab] = useState<"home" | "music" | "about" | "the side" | "contact" | "admin">("home");
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);

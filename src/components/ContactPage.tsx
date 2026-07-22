@@ -89,16 +89,24 @@ export default function ContactPage({ theme, config, onSubmitMessage }: ContactP
       className="space-y-16 md:space-y-24 max-w-4xl mx-auto py-6"
     >
       {/* 1. HERO SECTION */}
-      <section className="text-center space-y-3 py-10 md:py-16 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(181,5,3,0.04),transparent_70%)] pointer-events-none" />
+      <section className="text-center space-y-3 py-10 md:py-16 relative overflow-hidden rounded-3xl border border-sorside-red/10 bg-stone-950 text-white shadow-2xl px-6">
+        {/* Hero Image Accent Background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-35 transition-opacity duration-700 pointer-events-none scale-105"
+          style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(181,5,3,0.1),transparent_70%)] pointer-events-none" />
         
-        <span className="text-xs font-mono tracking-[0.4em] text-sorside-red uppercase font-semibold block">
-          {config.contactSubtitle || "SISI HUBUNGAN // CHANNELS"}
-        </span>
-        
-        <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight uppercase">
-          CONTACT
-        </h1>
+        <div className="relative z-10 space-y-3">
+          <span className="text-xs font-mono tracking-[0.4em] text-sorside-red uppercase font-semibold block">
+            {config.contactSubtitle || "SISI HUBUNGAN // CHANNELS"}
+          </span>
+          
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight uppercase">
+            CONTACT
+          </h1>
+        </div>
       </section>
 
       {/* 2. CONTACT INFO & 3. CONTACT FORM */}

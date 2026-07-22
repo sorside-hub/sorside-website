@@ -131,6 +131,14 @@ export default function TheSidePage({
           >
             {/* 1. HERO SECTION */}
             <section className="relative overflow-hidden rounded-3xl border border-sorside-red/10 p-8 md:p-16 flex flex-col justify-between min-h-[35vh] md:min-h-[45vh] bg-stone-950 text-white shadow-2xl">
+              {/* Hero Image Accent Background */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-35 transition-opacity duration-700 pointer-events-none scale-105"
+                style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-transparent to-stone-950/50 pointer-events-none" />
+
               {/* Subtle Atmospheric Grid */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(224,36,36,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(224,36,36,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] pointer-events-none" />
 

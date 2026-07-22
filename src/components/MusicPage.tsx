@@ -152,6 +152,14 @@ export default function MusicPage({
           >
             {/* 1. MUSIC HERO SECTION */}
             <section className="relative overflow-hidden rounded-3xl border border-sorside-red/10 p-8 md:p-16 flex flex-col justify-between min-h-[40vh] md:min-h-[50vh] bg-stone-950 text-white shadow-2xl">
+              {/* Hero Image Accent Background */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-35 transition-opacity duration-700 pointer-events-none scale-105"
+                style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-transparent to-stone-950/50 pointer-events-none" />
+
               {/* Subtle Lyric Snippet Moving in Background */}
               <div className="absolute top-1/4 right-0 transform translate-x-12 select-none pointer-events-none opacity-[0.03] text-5xl md:text-8xl font-serif whitespace-nowrap tracking-widest leading-none">
                 "menanti esok tanpa curiga..."
