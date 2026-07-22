@@ -1,0 +1,80 @@
+{
+  "id": "gema-langkah-tak-terdengar",
+  "title": "Gema Langkah Tak Terdengar",
+  "artist": "sorside",
+  "year": 2025,
+  "type": "Album",
+  "tag": "ALBUM",
+  "cover": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+  "story": "Album penuh perdana berisikan 5 komposisi reflektif yang menceritakan perjalanan seorang pekerja harian yang tetap menyalakan api kreativitas di tengah kelelahan.",
+  "about": "Gema Langkah Tak Terdengar merangkum 5 trek audio yang dirajut dengan cermat menggunakan pad synth yang dalam, petikan gitar ber-reverb, dan nuansa rekaman pita tua.",
+  "lyrics": "Koleksi lirik dari 5 trek yang membawa pendengar melintasi sudut-sudut kota, deretan halte, dan keheningan kamar.",
+  "credits": {
+    "writtenBy": "sorside",
+    "producedBy": "sorside",
+    "recordedAt": "Studio Kamar Tidur, Surabaya",
+    "releasedDate": "20 Mei 2025"
+  },
+  "freq1": 150,
+  "freq2": 300,
+  "filterFreq": 500,
+  "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "spotifyUrl": "https://open.spotify.com",
+  "tracks": [
+    {
+      "id": "gema-track-1",
+      "title": "1. Kereta Terakhir Kota",
+      "duration": "03:50",
+      "freq1": 150,
+      "freq2": 300,
+      "filterFreq": 550,
+      "lyrics": "Di dalam gerbong yang sepi\nRoda besi mengetuk ritme malam\nWajah-wajah lelah menatap kaca...",
+      "story": "Terinspirasi dari perjalanan pulang kerja di larut malam dengan transportasi publik.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gema-track-2",
+      "title": "2. Hujan di Atas Seng",
+      "duration": "04:05",
+      "freq1": 175,
+      "freq2": 350,
+      "filterFreq": 680,
+      "lyrics": "Rintik hujan menetes riuh\nMenghapus jejak lelah seharian\nDi bawah atap kita berteduh...",
+      "story": "Suara rintik hujan alami yang direkam langsung di atas atap seng studio sederhana.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gema-track-3",
+      "title": "3. Skenario 25",
+      "duration": "03:30",
+      "freq1": 200,
+      "freq2": 400,
+      "filterFreq": 800,
+      "lyrics": "Memutar ulang skenario yang sama\nDi umur yang penuh pertanyaan\nApakah ini jalan kita?",
+      "story": "Kisah tentang krisis usia seperempat abad dan pencarian makna hidup.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gema-track-4",
+      "title": "4. Kota yang Tak Pernah Tidur",
+      "duration": "04:30",
+      "freq1": 225,
+      "freq2": 450,
+      "filterFreq": 850,
+      "lyrics": "Lampu neon berpendar warna-warni\nOrang-orang lalu lalang tanpa henti\nDi tengah keramaian aku sendiri...",
+      "story": "Lanskap suara perkotaan yang sibuk dibenturkan dengan kontemplasi individu.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gema-track-5",
+      "title": "5. Pulang ke Diri Sendiri",
+      "duration": "05:10",
+      "freq1": 250,
+      "freq2": 500,
+      "filterFreq": 1000,
+      "lyrics": "Akhirnya sampai di pintu kamar\nLentera batin kembali berbinar\nDi sinilah aku menemukan damai...",
+      "story": "Penutup album yang tenang, menyimbolkan penerimaan dan kedamaian batin.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ]
+}

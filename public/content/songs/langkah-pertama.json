@@ -1,0 +1,24 @@
+{
+  "id": "langkah-pertama",
+  "title": "Langkah Pertama",
+  "artist": "sorside",
+  "year": 2025,
+  "type": "Single",
+  "tag": "SINGLE",
+  "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+  "story": "Sebuah trek tunggal yang merekam getaran awal melangkah ke dalam ketidakpastian. Dibuat di larut malam ketika keraguan dan keberanian beradu di udara dingin kamar.",
+  "about": "Langkah Pertama adalah komposisi atmosferik yang memadukan petikan gitar akustik hangat dengan pad synth yang lembut. Dibuat khusus sebagai salam pembuka bagi siapapun yang sedang memulai perjalanan baru.",
+  "lyrics": "Di antara redup lampu kota\nAda langkah yang ragu memulai\nNamun malam berbisik pelan\nLangkahkan saja, biarkan cerita dimulai...\n\nSatu detik keberanian\nCukup untuk mengalahkan sejuta keraguan.",
+  "credits": {
+    "writtenBy": "sorside",
+    "producedBy": "sorside",
+    "recordedAt": "Studio Kamar Tidur (3x3), Surabaya",
+    "releasedDate": "15 Januari 2025"
+  },
+  "relatedJournal": "lionel-messi-seni-mengolah-sunyi",
+  "freq1": 220,
+  "freq2": 440,
+  "filterFreq": 800,
+  "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "spotifyUrl": "https://open.spotify.com"
+}

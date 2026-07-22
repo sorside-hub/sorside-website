@@ -4,8 +4,8 @@
   "posterImageUrl": "/images/pages/artist_bedroom.jpg",
   "posterLabel": "Sisi Kamar — Sunyi",
   "posterQuote": "Terbangun ketika seluruh bumi terlelap. Menangkap sisa-sisa melodi batin.",
-  "latestReleaseSongId": "skenario-25",
-  "fromTheSideSource": "journal_kenapa-buat-musik-setelah-kerja",
+  "latestReleaseSongId": "gema-langkah-tak-terdengar",
+  "fromTheSideSource": "journal_lionel-messi-seni-mengolah-sunyi",
   "manifestoTitle": "sorside bukan hanya sekadar musik.",
   "manifestoQuote": "Ini adalah sisi lain dari seseorang yang tetap mengejar mimpi setelah dunia selesai menuntut.",
   "manifestoText": "Ketika siang hari dipakai untuk mengais materi demi memenuhi ekspektasi sosial, malam hari adalah tempat kejujuran dipulangkan. sorside lahir sebagai jurnal batin di sela-sela lelahnya rutinitas harian.",
@@ -37,7 +37,7 @@
   "theSideTitlePrefix": "SISI JURNAL // PROSES KREATIF",
   "theSideSubtitle": "Cerita, batin, dan sisa-sisa malam di balik sorside.",
   "theSideDescription": "Jika rilisan musik adalah hasil akhirnya, halaman ini merekam proses pencarian batin di sela-sela rutinitas yang monoton.",
-  "theSideFeaturedId": "kenapa-buat-musik-setelah-kerja",
+  "theSideFeaturedId": "lionel-messi-seni-mengolah-sunyi",
   "contactSubtitle": "SISI HUBUNGAN // CHANNELS",
   "contactQuote": "Mari saling terhubung.",
   "contactDescription": "Entah itu ajakan kolaborasi, obrolan santai, atau sekadar menyapa dan berbagi cerita. Setiap hubungan selalu dimulai dari satu sapaan tulus.",
@@ -51,5 +51,5 @@
   "contactManagementResponseTime": "Waktu tanggapan: 24-48 jam.",
   "musicTitlePrefix": "SISI SUARA // ARCHIVES",
   "musicSubtitle": "Kumpulan bebunyian, cerita, dan sisa-sisa ingatan dari sudut kamar sorside.",
-  "featuredReleaseId": "skenario-25"
+  "featuredReleaseId": "trilogi-malam"
 }

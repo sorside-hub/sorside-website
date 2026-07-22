@@ -141,7 +141,7 @@ export default function TheSidePage({
                 <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight uppercase">
                   The Side
                 </h1>
-                <p className="text-lg md:text-2xl font-newsreader text-gray-300 leading-relaxed italic max-w-md">
+                <p className="text-base md:text-xl font-serif italic text-sorside-red leading-relaxed max-w-md">
                   &ldquo;{config?.theSideSubtitle || "Cerita, batin, dan sisa-sisa malam di balik sorside."}&rdquo;
                 </p>
                 <p className="text-xs font-mono text-stone-500 max-w-sm pt-2 leading-relaxed">
@@ -392,7 +392,7 @@ export default function TheSidePage({
                   {finalCategories.find(c => c.id === selectedArticle.category)?.label || selectedArticle.categoryLabel || selectedArticle.category}
                 </span>
 
-                <h1 className={`text-2xl md:text-4xl font-editorial font-bold tracking-tight leading-snug ${
+                <h1 className={`text-2xl md:text-4xl font-display font-extrabold uppercase tracking-wider leading-snug ${
                   theme === "dark" ? "text-white" : "text-stone-900"
                 }`}>
                   {selectedArticle.title}

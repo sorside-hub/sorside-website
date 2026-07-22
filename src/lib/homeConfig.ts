@@ -70,8 +70,10 @@ export interface HomeConfig {
   contactManagementResponseTime?: string;
 
   // Music Page configs
-  musicSubtitle?: string;
   musicTitlePrefix?: string;
+  musicQuote?: string;
+  musicSubtitle?: string;
+  musicDescription?: string;
   featuredReleaseId?: string;
 }
 
@@ -147,7 +149,9 @@ export const DEFAULT_HOME_CONFIG: HomeConfig = {
 
   // Music Page defaults
   musicTitlePrefix: "SISI SUARA // ARCHIVES",
+  musicQuote: "Kumpulan bebunyian, cerita, dan sisa-sisa ingatan dari sudut kamar sorside.",
   musicSubtitle: "Kumpulan bebunyian, cerita, dan sisa-sisa ingatan dari sudut kamar sorside.",
+  musicDescription: "Dari rekaman kasar di kamar hingga rilisan utuh. Setiap trek menyimpan fragmen emosi dan eksperimen nada independen.",
   featuredReleaseId: "skenario-25"
 };
 
@@ -333,8 +337,17 @@ export const DEFAULT_CATEGORIES: JournalCategory[] = [];
 export async function loadJournals(): Promise<JournalArticle[]> {
   // Primary source: Decap CMS static content
   const staticJournals = fetchStaticJournals();
-  if (staticJournals) {
+  if (staticJournals && staticJournals.length > 0) {
     return staticJournals;
+  }
+  try {
+    const local = localStorage.getItem(LOCAL_STORAGE_JOURNALS_KEY);
+    if (local) {
+      const parsed = JSON.parse(local);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
+  } catch (e) {
+    console.error("Local storage read error for journals:", e);
   }
   return [];
 }
@@ -398,8 +411,19 @@ const LOCAL_STORAGE_SONGS_KEY = "sorside_songs";
 export async function loadSongs(): Promise<Song[]> {
   // Primary source: Decap CMS static content
   const staticSongs = fetchStaticSongs();
-  if (staticSongs) {
-    return staticSongs.sort((a: any, b: any) => b.year - a.year);
+  if (staticSongs && staticSongs.length > 0) {
+    return staticSongs.sort((a: any, b: any) => Number(b.year) - Number(a.year));
+  }
+  try {
+    const local = localStorage.getItem(LOCAL_STORAGE_SONGS_KEY);
+    if (local) {
+      const parsed = JSON.parse(local);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.sort((a: any, b: any) => Number(b.year) - Number(a.year));
+      }
+    }
+  } catch (e) {
+    console.error("Local storage read error for songs:", e);
   }
   return [];
 }

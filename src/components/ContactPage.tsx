@@ -89,26 +89,16 @@ export default function ContactPage({ theme, config, onSubmitMessage }: ContactP
       className="space-y-16 md:space-y-24 max-w-4xl mx-auto py-6"
     >
       {/* 1. HERO SECTION */}
-      <section className="text-center space-y-6 py-12 md:py-20 relative">
+      <section className="text-center space-y-3 py-10 md:py-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(181,5,3,0.04),transparent_70%)] pointer-events-none" />
         
-        <span className="text-xs font-mono tracking-[0.4em] text-sorside-red uppercase font-semibold">
+        <span className="text-xs font-mono tracking-[0.4em] text-sorside-red uppercase font-semibold block">
           {config.contactSubtitle || "SISI HUBUNGAN // CHANNELS"}
         </span>
         
         <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight uppercase">
           CONTACT
         </h1>
-        
-        <p className="text-lg md:text-2xl font-newsreader text-sorside-red italic tracking-wide">
-          &ldquo;{config.contactQuote || "Mari saling terhubung."}&rdquo;
-        </p>
-
-        <p className={`font-serif text-sm md:text-base leading-relaxed tracking-wide max-w-md mx-auto ${
-          theme === "dark" ? "text-zinc-400" : "text-stone-600"
-        }`}>
-          {config.contactDescription || "Entah itu ajakan kolaborasi, obrolan santai, atau sekadar menyapa dan berbagi cerita. Setiap hubungan selalu dimulai dari satu sapaan tulus."}
-        </p>
       </section>
 
       {/* 2. CONTACT INFO & 3. CONTACT FORM */}
@@ -381,7 +371,7 @@ export default function ContactPage({ theme, config, onSubmitMessage }: ContactP
 
       {/* 4. CLOSING STATEMENT */}
       <section className="text-center py-12 border-t border-sorside-red/10 space-y-4">
-        <p className="text-xl md:text-2xl font-newsreader leading-relaxed italic text-sorside-red">
+        <p className="text-base md:text-xl font-serif leading-relaxed text-sorside-red">
           &ldquo;Setiap obrolan selalu berawal dari sebuah langkah kecil. Terima kasih telah menyempatkan singgah.&rdquo;
         </p>
         <p className="text-[9px] font-mono tracking-[0.3em] uppercase text-stone-500">

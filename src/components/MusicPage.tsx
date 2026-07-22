@@ -153,10 +153,10 @@ export default function MusicPage({
             {/* 1. MUSIC HERO SECTION */}
             <section className="relative overflow-hidden rounded-3xl border border-sorside-red/10 p-8 md:p-16 flex flex-col justify-between min-h-[40vh] md:min-h-[50vh] bg-stone-950 text-white shadow-2xl">
               {/* Subtle Lyric Snippet Moving in Background */}
-              <div className="absolute top-1/4 right-0 transform translate-x-12 select-none pointer-events-none opacity-[0.03] text-5xl md:text-8xl font-serif italic whitespace-nowrap tracking-widest leading-none">
+              <div className="absolute top-1/4 right-0 transform translate-x-12 select-none pointer-events-none opacity-[0.03] text-5xl md:text-8xl font-serif whitespace-nowrap tracking-widest leading-none">
                 "menanti esok tanpa curiga..."
               </div>
-              <div className="absolute bottom-1/4 left-0 transform -translate-x-12 select-none pointer-events-none opacity-[0.02] text-5xl md:text-8xl font-serif italic whitespace-nowrap tracking-widest leading-none">
+              <div className="absolute bottom-1/4 left-0 transform -translate-x-12 select-none pointer-events-none opacity-[0.02] text-5xl md:text-8xl font-serif whitespace-nowrap tracking-widest leading-none">
                 "menanti esok tanpa curiga..."
               </div>
 
@@ -187,8 +187,11 @@ export default function MusicPage({
                 <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight uppercase">
                   MUSIC
                 </h1>
-                <p className="text-lg md:text-2xl font-editorial text-gray-300 leading-relaxed italic max-w-lg">
-                  {config.musicSubtitle || "Kumpulan bebunyian, cerita, dan sisa-sisa ingatan dari sudut kamar sorside."}
+                <p className="text-base md:text-xl font-serif italic text-sorside-red leading-relaxed max-w-md">
+                  &ldquo;{config?.musicQuote || config?.musicSubtitle || "Kumpulan bebunyian, cerita, dan sisa-sisa ingatan dari sudut kamar sorside."}&rdquo;
+                </p>
+                <p className="text-xs font-mono text-stone-500 max-w-sm pt-2 leading-relaxed">
+                  {config?.musicDescription || "Dari rekaman kasar di kamar hingga rilisan utuh. Setiap trek menyimpan fragmen emosi dan eksperimen nada independen."}
                 </p>
               </div>
 
@@ -581,61 +584,38 @@ export default function MusicPage({
             }`}>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                 
-                {/* Cover Frame or YouTube Embed */}
+                {/* Cover Frame */}
                 <div className="md:col-span-4 flex justify-center w-full">
-                  {(() => {
-                    const activeDetailYoutubeUrl = activeTrack?.youtubeUrl || selectedSong?.youtubeUrl;
-                    const activeDetailYoutubeId = activeDetailYoutubeUrl ? getYouTubeId(activeDetailYoutubeUrl) : null;
-                    const isCurrentPlaying = isAudioPlaying && currentSong?.id === selectedSong.id;
-
-                    if (isCurrentPlaying && activeDetailYoutubeId) {
-                      return (
-                        <div className="relative w-full aspect-video md:aspect-square rounded-xl overflow-hidden shadow-2xl border border-sorside-red/20 glow-red">
-                          <iframe
-                            src={`https://www.youtube.com/embed/${activeDetailYoutubeId}?autoplay=1&enablejsapi=1`}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                            className="w-full h-full"
-                          />
-                        </div>
-                      );
-                    } else {
-                      return (
-                        <div className="relative w-48 md:w-64 aspect-square group">
-                          <div className="absolute inset-0 bg-sorside-red/10 rounded-xl blur-md" />
-                          <img
-                            src={selectedSong.cover}
-                            alt={selectedSong.title}
-                            referrerPolicy="no-referrer"
-                            className="relative z-10 w-full h-full object-cover rounded-xl border border-neutral-800/10 shadow-lg grayscale brightness-95 group-hover:grayscale-0 duration-500 transition-all"
-                          />
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center z-20 transition-opacity duration-300 rounded-xl">
-                            <button
-                              onClick={() => {
-                                if (selectedSong.tracks && selectedSong.tracks.length > 0) {
-                                  const trackToPlay = activeTrack || selectedSong.tracks[0];
-                                  onPlaySong(selectedSong, trackToPlay);
-                                } else {
-                                  onPlaySong(selectedSong);
-                                }
-                              }}
-                              className="w-12 h-12 rounded-full bg-sorside-red text-white flex items-center justify-center shadow-lg transform scale-95 group-hover:scale-100 transition-transform cursor-pointer"
-                            >
-                              <Play size={16} fill="currentColor" className="ml-0.5" />
-                            </button>
-                          </div>
-                        </div>
-                      );
-                    }
-                  })()}
+                  <div className="relative w-48 md:w-64 aspect-square group">
+                    <div className="absolute inset-0 bg-sorside-red/10 rounded-xl blur-md" />
+                    <img
+                      src={selectedSong.cover}
+                      alt={selectedSong.title}
+                      referrerPolicy="no-referrer"
+                      className="relative z-10 w-full h-full object-cover rounded-xl border border-neutral-800/10 shadow-lg grayscale brightness-95 group-hover:grayscale-0 duration-500 transition-all"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center z-20 transition-opacity duration-300 rounded-xl">
+                      <button
+                        onClick={() => {
+                          if (selectedSong.tracks && selectedSong.tracks.length > 0) {
+                            const trackToPlay = activeTrack || selectedSong.tracks[0];
+                            onPlaySong(selectedSong, trackToPlay);
+                          } else {
+                            onPlaySong(selectedSong);
+                          }
+                        }}
+                        className="w-12 h-12 rounded-full bg-sorside-red text-white flex items-center justify-center shadow-lg transform scale-95 group-hover:scale-100 transition-transform cursor-pointer"
+                      >
+                        <Play size={16} fill="currentColor" className="ml-0.5" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Cover info */}
                 <div className="md:col-span-8 space-y-6">
                   <div className="space-y-2">
-                    <h2 className="text-4xl md:text-5xl font-serif font-black tracking-tight italic text-sorside-red">
+                    <h2 className="text-4xl md:text-5xl font-display font-extrabold tracking-tight uppercase text-sorside-red">
                       {selectedSong.title}
                     </h2>
                     <p className="text-xs font-mono text-stone-500">
@@ -843,7 +823,7 @@ export default function MusicPage({
                       {activeTrack ? `Lirik / Catatan: ${activeTrack.title.replace(/^\d+\.\s*/, '')}` : "Lirik"}
                     </h3>
                   </div>
-                  <div className={`p-6 md:p-8 rounded-2xl border font-serif italic whitespace-pre-line leading-relaxed tracking-wide text-sm md:text-base bg-opacity-30 ${
+                  <div className={`p-6 md:p-8 rounded-2xl border font-serif whitespace-pre-line leading-relaxed tracking-wide text-sm md:text-base bg-opacity-30 ${
                     theme === "dark" 
                       ? "bg-zinc-950/60 border-zinc-900 text-gray-200" 
                       : "bg-stone-50 border-stone-200 text-stone-800 shadow-sm"

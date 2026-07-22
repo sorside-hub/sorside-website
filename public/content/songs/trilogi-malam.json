@@ -1,0 +1,58 @@
+{
+  "id": "trilogi-malam",
+  "title": "Trilogi Malam",
+  "artist": "sorside",
+  "year": 2025,
+  "type": "EP",
+  "tag": "EP",
+  "cover": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=800&auto=format&fit=crop",
+  "story": "Mini album berisikan 3 babak tentang pergulatan pikiran di waktu-waktu antara pukul 01.00 hingga 04.00 pagi. Masing-masing trek mewakili fase dari kelelahan, perenungan, hingga fajar.",
+  "about": "Trilogi Malam adalah eksplorasi audio 3 trek yang menyatukan unsur Cinematic Shoegaze dan Ambient. Memperlihatkan spektrum dinamis dari melodi yang tenang hingga dentuman distorsi lembut.",
+  "lyrics": "Babak 1: Jam Satu Pagi\nLampu jalanan berkedip perlahan...\n\nBabak 2: Di Sela Dinding\nKeheningan menjadi ruang dengar yang paling jujur...\n\nBabak 3: Menjelang Fajar\nCahaya tipis menyapa kaca jendela...",
+  "credits": {
+    "writtenBy": "sorside",
+    "producedBy": "sorside",
+    "recordedAt": "Studio Kamar Tidur, Surabaya",
+    "releasedDate": "28 Februari 2025"
+  },
+  "freq1": 180,
+  "freq2": 360,
+  "filterFreq": 650,
+  "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "spotifyUrl": "https://open.spotify.com",
+  "tracks": [
+    {
+      "id": "trilogi-malam-track-1",
+      "title": "01:00 AM — Dinding dan Suara",
+      "duration": "03:45",
+      "freq1": 180,
+      "freq2": 360,
+      "filterFreq": 600,
+      "lyrics": "Di sudut kamar ini\nSuara berbisik pelan\nMenyusuri ingatan...",
+      "story": "Trek pertama merekam momen ketika kesibukan hari selesai dan sunyi mulai merayap masuk.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "trilogi-malam-track-2",
+      "title": "02:30 AM — Gelombang Tanpa Nama",
+      "duration": "04:12",
+      "freq1": 210,
+      "freq2": 420,
+      "filterFreq": 750,
+      "lyrics": "Melayang di udara\nAntara sadar dan lelap\nMencari jawaban yang hilang...",
+      "story": "Puncak perenungan di tengah malam, dengan lapisan synth analog yang menghanyutkan.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "trilogi-malam-track-3",
+      "title": "04:00 AM — Fajar Pertama",
+      "duration": "03:20",
+      "freq1": 240,
+      "freq2": 480,
+      "filterFreq": 900,
+      "lyrics": "Sinar fajar merekah di timur\nMenghapus keheningan yang panjang\nSiap menyapa pagi baru...",
+      "story": "Klimaks bernada optimis saat bayangan fajar mulai membiaskan cahaya di jendela.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ]
+}

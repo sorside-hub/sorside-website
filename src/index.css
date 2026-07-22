@@ -1,13 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Syne:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
-
-@font-face {
-  font-family: 'Dashley';
-  src: url('/fonts/dashley.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme {
   --color-sorside-red: #B50503;
@@ -15,13 +7,13 @@
   --color-charcoal-card: #141417;
   --color-linen-light: #FAF9F6;
   --color-linen-card: #FFFFFF;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Lora", Georgia, serif;
   --font-serif: "Lora", Georgia, serif;
-  --font-display: "Syne", "Inter", sans-serif;
-  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Archivo Black", sans-serif;
+  --font-editorial: "Lora", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
-  --font-dashley: "Dashley", "Cormorant Garamond", serif;
-  --font-newsreader: "Newsreader", "Lora", Georgia, serif;
+  --font-dashley: "Archivo Black", sans-serif;
+  --font-newsreader: "Lora", Georgia, serif;
 }
 
 /* Custom noise overlay */
@@ -61,9 +53,9 @@
 /* Custom styles for editorial aesthetics */
 .font-dashley {
   font-family: var(--font-dashley);
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 /* Red glow effects for artistic mood */

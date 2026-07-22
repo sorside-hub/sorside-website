@@ -69,9 +69,9 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return (
-          <em key={index} className="font-newsreader italic">
+          <span key={index} className="font-serif">
             {part}
-          </em>
+          </span>
         );
       } else {
         // Also handle underscores for italics: _text_
@@ -79,9 +79,9 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
         return subParts.map((subPart, subIdx) => {
           if (subIdx % 2 === 1) {
             return (
-              <em key={subIdx} className="font-newsreader italic">
+              <span key={subIdx} className="font-serif">
                 {subPart}
-              </em>
+              </span>
             );
           }
           return subPart;
@@ -100,7 +100,7 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
       elements.push(
         <h1 
           key={keyIndex++} 
-          className={`text-2xl md:text-3xl font-serif font-bold tracking-tight mt-8 mb-4 ${
+          className={`text-2xl md:text-3xl font-display font-extrabold uppercase tracking-wider mt-8 mb-4 ${
             theme === "dark" ? "text-white" : "text-stone-900"
           }`}
         >
@@ -117,7 +117,7 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
       elements.push(
         <h2 
           key={keyIndex++} 
-          className={`text-xl md:text-2xl font-serif font-bold tracking-tight mt-6 mb-3 ${
+          className={`text-xl md:text-2xl font-display font-bold uppercase tracking-wider mt-6 mb-3 ${
             theme === "dark" ? "text-white" : "text-stone-900"
           }`}
         >
@@ -134,7 +134,7 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
       elements.push(
         <h3 
           key={keyIndex++} 
-          className={`text-lg md:text-xl font-serif font-bold tracking-tight mt-5 mb-2 ${
+          className={`text-lg md:text-xl font-display font-bold uppercase tracking-wider mt-5 mb-2 ${
             theme === "dark" ? "text-white" : "text-stone-900"
           }`}
         >
@@ -151,7 +151,7 @@ export default function MarkdownRenderer({ content, theme }: MarkdownRendererPro
       elements.push(
         <blockquote 
           key={keyIndex++} 
-          className={`border-l-2 border-sorside-red pl-4 py-1 my-4 font-newsreader italic text-base md:text-lg leading-relaxed ${
+          className={`border-l-2 border-sorside-red pl-4 py-1 my-4 font-serif text-base md:text-lg leading-relaxed ${
             theme === "dark" ? "text-sorside-red/90" : "text-sorside-red"
           }`}
         >

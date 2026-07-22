@@ -809,7 +809,7 @@ export default function App() {
                     className="hidden sm:flex items-center space-x-2 bg-sorside-red/10 border border-sorside-red/20 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest text-sorside-red"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-sorside-red animate-ping" />
-                    <span>PLAYING SOUNDSCAPE</span>
+                    <span>PLAYING</span>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -890,7 +890,7 @@ export default function App() {
               <div className={`p-6 border-l border-sorside-red bg-opacity-30 rounded-r-xl max-w-lg mb-10 ${
                 theme === "dark" ? "bg-zinc-900/50" : "bg-stone-100"
               }`}>
-                <p className="font-editorial italic text-base leading-relaxed text-sorside-red">
+                <p className="font-serif text-base leading-relaxed text-sorside-red">
                   {comingSoonMessage.quote}
                 </p>
                 <p className="text-[10px] font-mono tracking-widest text-right mt-2 text-stone-500">
@@ -939,16 +939,12 @@ export default function App() {
                     <span className="text-sorside-red font-dashley">side</span>
                   </h1>
                   
-                  <p className={`text-xl md:text-2xl font-newsreader leading-relaxed tracking-wide italic max-w-lg ${
-                    theme === "dark" ? "text-gray-300" : "text-stone-700"
-                  }`}>
+                  <p className="text-base md:text-xl font-serif italic text-sorside-red leading-relaxed tracking-wide max-w-lg">
                     &ldquo;{homeConfig.descriptionQuote === "Suara dari sisi yang masih bertahan." ? "Setiap orang punya sisi lain. Sisi yang hadir ketika dunia mulai sunyi" : homeConfig.descriptionQuote}&rdquo;
                   </p>
                 </div>
 
-                <p className={`font-serif text-sm md:text-base leading-relaxed tracking-wide max-w-md ${
-                  theme === "dark" ? "text-gray-400" : "text-stone-600"
-                }`}>
+                <p className="text-xs font-mono text-stone-500 max-w-sm pt-2 leading-relaxed">
                   {homeConfig.descriptionDetail}
                 </p>
 
@@ -1019,7 +1015,7 @@ export default function App() {
                       <p className="text-[10px] font-mono tracking-widest text-sorside-red uppercase font-semibold">
                         {homeConfig.posterLabel}
                       </p>
-                      <p className="text-xs font-newsreader italic text-white/95 leading-normal">
+                      <p className="text-xs font-serif text-white/95 leading-normal">
                         &ldquo;{homeConfig.posterQuote}&rdquo;
                       </p>
                     </div>
@@ -1075,7 +1071,7 @@ export default function App() {
                       </p>
                     </div>
 
-                    <div className="prose prose-stone dark:prose-invert max-w-none italic">
+                    <div className="prose prose-stone dark:prose-invert max-w-none">
                       <MarkdownRenderer content={latestRelease.story} theme={theme} />
                     </div>
 
@@ -1129,6 +1125,20 @@ export default function App() {
                         <ExternalLink size={10} />
                       </a>
 
+                      <button
+                        onClick={() => handleTabClick("music")}
+                        className={`px-5 py-3 rounded border text-xs font-mono uppercase tracking-widest transition-all flex items-center gap-2 cursor-pointer ${
+                          theme === "dark"
+                            ? "bg-sorside-red/10 border-sorside-red/30 text-sorside-red hover:bg-sorside-red/20"
+                            : "bg-sorside-red/5 border-sorside-red/20 text-sorside-red hover:bg-sorside-red/10"
+                        }`}
+                        id="btn-go-to-music"
+                      >
+                        <Music size={12} />
+                        <span>Semua Rilisan</span>
+                        <ArrowRight size={12} />
+                      </button>
+
                     </div>
 
                   </div>
@@ -1155,7 +1165,7 @@ export default function App() {
                     {homeConfig.manifestoTitle || "sorside bukan hanya sekadar musik."}
                   </h3>
                   
-                  <p className={`text-lg md:text-2xl font-newsreader italic leading-relaxed max-w-3xl mx-auto ${
+                  <p className={`text-base md:text-xl font-serif leading-relaxed max-w-3xl mx-auto ${
                     theme === "dark" ? "text-gray-300" : "text-stone-700"
                   }`}>
                     &ldquo;{homeConfig.manifestoQuote || "Ini adalah sisi lain dari seseorang yang tetap mengejar mimpi setelah dunia selesai menuntut."}&rdquo;
@@ -1535,7 +1545,7 @@ export default function App() {
                     <span className="text-[10px] font-mono tracking-[0.25em] text-sorside-red uppercase block">
                       Cerita di Balik Lagu
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-editorial font-bold tracking-tight">
+                    <h3 className="text-2xl md:text-3xl font-display font-extrabold tracking-tight uppercase">
                       {latestRelease.title}
                     </h3>
                     <p className="text-xs font-mono text-stone-500">
@@ -1557,7 +1567,7 @@ export default function App() {
                         <h4 className="text-base font-serif font-bold text-sorside-red pt-4">
                           Lirik &amp; Bait (Lyrics)
                         </h4>
-                        <div className="font-serif italic whitespace-pre-line p-5 border rounded bg-opacity-30 space-y-2 leading-relaxed tracking-wide text-xs md:text-sm bg-neutral-900/50 border-sorside-red/10">
+                        <div className="font-serif whitespace-pre-line p-5 border rounded bg-opacity-30 space-y-2 leading-relaxed tracking-wide text-xs md:text-sm bg-neutral-900/50 border-sorside-red/10">
                           {latestRelease.lyrics}
                         </div>
                       </>
@@ -1573,7 +1583,7 @@ export default function App() {
                     <span className="text-[10px] font-mono tracking-[0.25em] text-sorside-red uppercase block">
                       {featuredSide.category}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-editorial font-bold tracking-tight leading-tight">
+                    <h3 className="text-2xl md:text-3xl font-display font-extrabold tracking-tight uppercase leading-tight">
                       {featuredSide.title}
                     </h3>
                     <p className="text-xs font-mono text-stone-500">
@@ -1688,7 +1698,7 @@ export default function App() {
               <div className="flex-1 min-w-0 text-left">
                 {currentTrack ? (
                   <>
-                    <h4 className="text-xs font-serif font-bold italic text-zinc-100 truncate" title={currentTrack.title}>
+                    <h4 className="text-xs font-serif font-bold text-zinc-100 truncate" title={currentTrack.title}>
                       {currentTrack.title}
                     </h4>
                     <p className="text-[9px] font-mono text-zinc-400 truncate mt-0.5" title={currentSong.title}>
@@ -1697,7 +1707,7 @@ export default function App() {
                   </>
                 ) : (
                   <>
-                    <h4 className="text-xs font-serif font-bold italic text-zinc-100 truncate" title={currentSong.title}>
+                    <h4 className="text-xs font-serif font-bold text-zinc-100 truncate" title={currentSong.title}>
                       {currentSong.title}
                     </h4>
                     <p className="text-[9px] font-mono text-zinc-400 truncate mt-0.5">
